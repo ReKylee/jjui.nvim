@@ -4,7 +4,7 @@ A Neovim plugin to toggle the excellent [jjui](https://github.com/idursun/jjui) 
 
 This is my first Neovim plugin. I hope you find it useful!
 
-_Screenshot of the plugin in action_
+![Showcase](https://raw.githubusercontent.com/ReKylee/jjui.nvim/refs/heads/main/media/example.gif)
 
 ## ✨ Features
 
