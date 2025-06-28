@@ -91,12 +91,12 @@ require("jjui").setup({
 
 The plugin provides one command, which is primarily intended to be used via its keymap.
 
-- :JJUI - Opens or closes the jjui window.
+- `:JJUI - Opens or closes the jjui window.`
 
 By default, this is mapped to <leader>jj, but you can change this in the keymaps section of your configuration.
 
 ## Credits
 
-- This plugin would not be possible without jjui by idursun.
+- Big shoutout to ![jjui by idursun](https://github.com/idursun/jjui) for making jjui in the first place!.
 
-- UI and terminal management is handled by folke/snacks.nvim.
+- UI and terminal management is handled by ![folke/snacks.nvim](https://github.com/folke/snacks.nvim).
