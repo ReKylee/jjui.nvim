@@ -1,7 +1,4 @@
--- jjui.nvim
---
--- Main plugin file. Orchestrates the other modules.
-
+---
 ---@type jjui.config
 local config = require("jjui.config")
 ---@type jjui.jj
@@ -11,7 +8,19 @@ local ui = require("jjui.ui")
 
 ---@class jjui
 local M = {}
+--- Sets up the plugin's keymaps based on the configuration.
+local function setup_keymaps()
+	local toggle_map = config.options.keymaps.toggle
+	if not toggle_map then
+		return
+	end
 
+	vim.keymap.set("n", toggle_map, "<cmd>JJUI<CR>", {
+		noremap = true,
+		silent = true,
+		desc = "Toggle Jujutsu UI",
+	})
+end
 --- Toggles the visibility of the jjui floating terminal.
 function M.toggle()
 	if not (Snacks and Snacks.terminal and Snacks.terminal.get) then
@@ -23,7 +32,7 @@ function M.toggle()
 	---@type snacks.win?
 	local term = Snacks.terminal.get(config.options.executable, { create = false })
 
-	if term and term:is_open() then
+	if term and not term.closed then
 		-- If the terminal is already open, close it.
 		ui.close(term)
 	else
@@ -37,6 +46,7 @@ end
 ---@param opts jjui.Config|nil
 function M.setup(opts)
 	config.setup(opts)
+	setup_keymaps()
 end
 
 return M

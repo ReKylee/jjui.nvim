@@ -1,7 +1,6 @@
--- lua/jjui/ui.lua
 --
 -- Handles all UI rendering and terminal management.
-
+--
 ---@type jjui.config
 local config = require("jjui.config")
 

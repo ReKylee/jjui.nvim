@@ -4,8 +4,8 @@
 
 -- Define the user command.
 -- It's good practice to check if the command already exists.
-if vim.fn.exists(":JjuiToggle") == 0 then
-	vim.api.nvim_create_user_command("JjuiToggle", function()
+if vim.fn.exists(":JJUI") == 0 then
+	vim.api.nvim_create_user_command("JJUI", function()
 		-- Lazily require the main module to improve startup time.
 		require("jjui").toggle()
 	end, {

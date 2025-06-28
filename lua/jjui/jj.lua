@@ -1,3 +1,4 @@
+--
 -- Handles interaction with the `jj` command-line tool.
 ---@class jjui.jj
 local M = {}
