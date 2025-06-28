@@ -133,7 +133,7 @@ local function create_new_terminal()
 			else
 				init_cmd = { "jj", "init", "--git" }
 			end
-
+			vim.notify(init_cmd)
 			-- User chose to initialize. Run the selected command asynchronously.
 			vim.system(
 				init_cmd,
