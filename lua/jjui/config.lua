@@ -5,6 +5,7 @@
 ---@field editor string The terminal editor to use for interactive commands like `jj describe`.
 ---@field keymaps table<string, string|false> Keymaps for the plugin.
 ---@field terminal_opts snacks.terminal.Opts Options for the snacks.nvim terminal.
+---
 
 ---@class jjui.config
 local M = {}

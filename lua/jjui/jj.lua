@@ -6,7 +6,6 @@ local M = {}
 --- Prompts the user to initialize a new jj repository.
 ---@param on_success fun() The callback to run after successful initialization.
 function M.prompt_and_init(on_success)
-	vim.notify("DEBUG: Running latest jj.lua", vim.log.levels.WARN, { title = "jjui.nvim" })
 	local items = {
 		"Initialize a new jj/git repository (`jj git init`)",
 		"Initialize a colocated jj/git repository (`jj git init --colocate`)",
